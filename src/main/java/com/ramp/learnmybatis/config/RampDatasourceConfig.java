@@ -16,7 +16,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@MapperScan("com.ramp.learnmybatis.**.dal")
+@MapperScan(value = "com.ramp.learnmybatis.**.dal", sqlSessionFactoryRef = "rampSqlSessionFactory")
 @EnableTransactionManagement
 public class RampDatasourceConfig {
 
