@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.ramp'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.5.5'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+
+	runtimeOnly 'org.postgresql:postgresql:42.2.24.jre7'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
+}
+
+test {
+	useJUnitPlatform()
+}
